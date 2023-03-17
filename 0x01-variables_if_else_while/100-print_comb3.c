@@ -1,26 +1,34 @@
+#include <stdio.h>
+
 int main(void)
 {
-int i, j, k;
+int i, j;
 
 for (i = 0; i < 100; i++)
 {
-j = i % 10; /* Extract last digit */
-k = i / 10; /* Extract first digit */
-
-if (k != j && k < j) /* Check for different digits and smallest combination */
+for (j = i + 1; j < 100; j++)
 {
-putchar(k + '0'); /* Convert digits to characters and print */
-putchar(j + '0');
-
-if (i != 89) /* Check for last combination */
+if ((i / 10 == j / 10) || (i % 10 == j % 10) || (i == j))
 {
-putchar(','); /* Print separator */
+continue;
+}
+
+putchar(i / 10 + '0');
+putchar(i % 10 + '0');
+putchar(',');
+putchar(' ');
+putchar(j / 10 + '0');
+putchar(j % 10 + '0');
+
+if (i != 98 || j != 99)
+{
+ <putchar(',');
 putchar(' ');
 }
 }
 }
 
-putchar('\n'); /* Print newline */
-
-return (0);
+putchar('\n');
+return 0;
 }
+

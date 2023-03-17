@@ -21,7 +21,8 @@ putchar(k % 10 + '0');
 if (i < 8)
 {
 putchar(',');
-putchar(' ');} 
+putchar(' ');
+} 
 }
 }
 putchar('\n');

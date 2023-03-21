@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(void)
 {
-putchar("P";)
+putchar("P");
 return(0);
 }

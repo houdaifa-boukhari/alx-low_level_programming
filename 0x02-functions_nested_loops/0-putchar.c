@@ -1,5 +1,9 @@
 #include<stdio.h>
 int main(void)
+/**
+ * main - Write a program that prints _putchar
+ * Return: Always (Success)
+ */
 {
 putchar('_');
 putchar('p');
@@ -10,5 +14,5 @@ putchar('h');
 putchar('a');
 putchar('r');
 putchar('\n');
-return(0);
+return (0);
 }

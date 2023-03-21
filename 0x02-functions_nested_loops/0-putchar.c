@@ -1,9 +1,9 @@
 #include<stdio.h>
-int main(void)
 /**
  * main - Write a program that prints _putchar
  * Return: Always (Success)
  */
+int main(void)
 {
 putchar('_');
 putchar('p');

@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+int _abs(int n)
 {
-    return isalpha(c);
+    return abs(n);
 }

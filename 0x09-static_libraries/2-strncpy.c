@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+char *_strncpy(char *dest, char *src, int n)
 {
-    return isalpha(c);
+    return strncpy(dest, src, n);
 }

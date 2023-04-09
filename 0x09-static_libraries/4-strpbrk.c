@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+char *_strpbrk(char *s, char *accept)
 {
-    return isalpha(c);
+    return strpbrk(s, accept);
 }

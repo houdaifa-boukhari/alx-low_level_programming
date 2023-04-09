@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+char *_strcat(char *dest, char *src)
 {
-    return isalpha(c);
+    return strcat(dest, src);
 }

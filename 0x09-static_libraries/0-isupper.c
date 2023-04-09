@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+int _isupper(int c)
 {
-    return isalpha(c);
+    return (c >= 'A' && c <= 'Z');
 }

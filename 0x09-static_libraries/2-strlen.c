@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+int _strlen(char *s)
 {
-    return isalpha(c);
+    return strlen(s);
 }

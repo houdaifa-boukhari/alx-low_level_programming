@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+unsigned int _strspn(char *s, char *accept)
 {
-    return isalpha(c);
+    return strspn(s, accept);
 }

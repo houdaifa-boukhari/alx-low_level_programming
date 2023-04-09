@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+char *_strstr(char *haystack, char *needle)
 {
-    return isalpha(c);
+    return strstr(haystack, needle);
 }

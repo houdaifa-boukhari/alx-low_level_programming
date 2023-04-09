@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int _isalpha(int c)
+char *_memset(char *s, char b, unsigned int n)
 {
-    return isalpha(c);
+    return memset(s, b, n);
 }

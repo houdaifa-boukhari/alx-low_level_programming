@@ -28,6 +28,5 @@ int	check_prime_number(int n, int i)
 
 int	is_prime_number(int n)
 {
-	return check_prime_number(n, n / 2);
-	
+	return (check_prime_number(n, n / 2));
 }

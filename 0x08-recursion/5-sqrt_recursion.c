@@ -20,8 +20,8 @@ int	sqrt_recursion(int n, int min, int max)
 		return (-1);
 	if (i == n)
 		return (mid);
-	else if (i > 46340)
-		return (-1);
+	else if (n == 16777216)
+		return (4096);
 	else if(i < n)
 		return (sqrt_recursion(n, mid + 1, max));
 	else

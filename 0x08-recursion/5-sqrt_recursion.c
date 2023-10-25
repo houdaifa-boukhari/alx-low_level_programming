@@ -12,7 +12,7 @@ int	sqrt_recursion(int n, int min, int max)
 {
 	int i;
 	int mid;
-	
+
 	mid = min + (max - min) / 2;
 	i = mid * mid;
 
@@ -22,7 +22,7 @@ int	sqrt_recursion(int n, int min, int max)
 		return (mid);
 	else if (n == 16777216)
 		return (4096);
-	else if(i < n)
+	else if (i < n)
 		return (sqrt_recursion(n, mid + 1, max));
 	else
 		return (sqrt_recursion(n, min, mid - 1));

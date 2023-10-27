@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 			}
 			i++;
 		}
-		printf("%d", change);
+		printf("%d\n", change);
 	}
 	else
 	{

@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-/*
+/**
 * short_atoi - change string to number
-*@str: array of string
-*Return: integer
+* @str: array of string
+*
+* Return: integer
 */
 
 int	short_atoi(char *str)
@@ -21,34 +22,36 @@ int	short_atoi(char *str)
 	return (result);
 }
 
-/*
+/**
 * cheack - cheack is number or not
 * @str: string
+*
 * Return: 1 is true , 0 or not
 */
 
 int	cheack(char *str)
 {
 	int i;
-	int j;
+	int k;
 
-	j = 0;
+	k = 0;
 	i = 0;
 	while (str[i])
 		i++;
-	while(str[j] >= '0' && str[j] <= '9')	
-			j++;
-	if (i == j)
+	while (str[k] >= '0' && str[k] <= '9')
+		k++;
+	if (i == k)
 		return (1);
 	else
 		return (0);
 }
 
-/*
+/**
 * main - prints the first argumment
-*@argc: number of argumment
-*@argv: array of argumment
-*Return: always 0
+* @argc: number of argumment
+* @argv: array of argumment
+*
+* Return: always 0
 */
 
 int	main(int argc, char **argv)
@@ -75,8 +78,7 @@ int	main(int argc, char **argv)
 		}
 		printf("%d\n", result);
 	}
-	else{
+	else
 		printf("0");
-	}
 	return (0);
 }

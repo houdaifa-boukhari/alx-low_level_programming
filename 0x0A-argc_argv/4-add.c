@@ -32,15 +32,15 @@ int	short_atoi(char *str)
 int	cheack(char *str)
 {
 	int i;
-	int k;
+	int j;
 
-	k = 0;
+	j = 0;
 	i = 0;
 	while (str[i])
 		i++;
-	while (str[k] >= '0' && str[k] <= '9')
-		k++;
-	if (i == k)
+	while (str[j] >= '0' && str[j] <= '9')
+		j++;
+	if (i == j)
 		return (1);
 	else
 		return (0);

@@ -1,11 +1,12 @@
 #include "stdio.h"
 
 /**
- * main - print number the argument
- * @argc: number of argumment
- * @argv: array of argument
- * Ruturn: always 0
-**/
+* main - prints the first argumment
+* @argc: number of argumment
+* @argv: array of argumment
+*
+* Return: always 0
+*/
 
 int	main(int argc, char **argv)
 {

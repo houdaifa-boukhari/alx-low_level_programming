@@ -36,6 +36,8 @@ int	cheack(char *str)
 
 	j = 0;
 	i = 0;
+	if (str[i] == '-')
+		return (0);
 	while (str[i])
 		i++;
 	while (str[j] >= '0' && str[j] <= '9')

@@ -39,9 +39,9 @@ int	main(int argc, char **argv)
 {
 	if (argc == 3)
 	{
-		printf("%d", short_atoi(argv[1]) * short_atoi(argv[2]));
+		printf("%d\n", short_atoi(argv[1]) * short_atoi(argv[2]));
 	}
 	else
-		printf("Error");
+		printf("Error\n");
 	return (0);
 }

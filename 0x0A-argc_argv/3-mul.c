@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-/*
-* short_atoi - change string to number 
-*@str: array of string 
-*Return: integer
+/**
+* short_atoi - change string to number
+* @str: array of string
+*
+* Return: integer
 */
 
 int	short_atoi(char *str)
@@ -28,11 +29,12 @@ int	short_atoi(char *str)
 	return (signe * result);
 }
 
-/*
+/**
 * main - prints the first argumment
-*@argc: number of argumment
-*@argv: array of argumment
-*Return: always 0
+* @argc: number of argumment
+* @argv: array of argumment
+*
+* Return: always 0
 */
 
 int	main(int argc, char **argv)

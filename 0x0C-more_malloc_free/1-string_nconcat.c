@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* str_nconcat - concat s1 and s2
+* string_nconcat - concat s1 and s2
 * @s1: the first string
 * @s2: the secend string
 * @n: number the s2 contact with s1
@@ -9,7 +9,7 @@
 * Return: new str.
 */
 
-char *str_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int i;
 	int j;

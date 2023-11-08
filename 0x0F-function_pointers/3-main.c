@@ -27,11 +27,10 @@ int main(int argc, char **argv)
 			printf("Error\n");
 			exit(99);
 		}
-		if (op != '-' || op != '+' || op != '*'
-			|| op != '%' || op != '/')
+		if ((op == '/' || op == '%') && b == 0)
 		{
 			printf("Error\n");
-			exit(98);
+			exit(100);
 		}
 		result = f(a, b);
 		printf("%d\n", result);

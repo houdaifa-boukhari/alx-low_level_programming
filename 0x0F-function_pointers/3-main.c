@@ -1,4 +1,4 @@
-#include "3-caloc.h"
+#include "3-calc.h"
 
 /**
  * main - calcult the number for op

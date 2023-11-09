@@ -1,5 +1,13 @@
 #include "variadic_functions.h"
 
+/**
+ * print_strings - print_strings passed a parametr
+ * @separator: sep
+ * @n:  is the number of integers passed to the function
+ *
+ * Return: NOTHINGe
+ */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
@@ -12,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(args, char *);
 		if (!str)
-			str = "(nil)"; 
+			str = "(nil)";
 		if (!separator)
 			printf("%s", str);
 		else if (separator && i == 0)

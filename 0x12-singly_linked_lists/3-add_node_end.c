@@ -1,14 +1,15 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a list
+ * add_node - adds a new node at the end of a list
  * @head: pointer of the header linked list
  * @str: string to copy the new node
- * Return: the new node
+ * Return: new node
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
+	list_t *p;
 	list_t *new_node;
 	size_t i;
 
@@ -25,7 +26,15 @@ list_t *add_node(list_t **head, const char *str)
 	while (str[i])
 		i++;
 	new_node->len = i;
-	new_node->next = *head;
-	*head = new_node;
+	if (*head == NULL)
+		*head = new_node;
+	else
+	{
+		p = *head;
+		while (p->next != NULL)
+			p = p->next;
+		p->next = new_node;
+	}
+	new_node->next = NULL;
 	return (new_node);
 }

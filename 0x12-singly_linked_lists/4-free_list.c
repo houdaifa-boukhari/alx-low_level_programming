@@ -3,7 +3,7 @@
 /**
  * free_list - free all the list
  * @head: pointer of the header linked list
- * 
+ *
  * Return: noyhing
  */
 

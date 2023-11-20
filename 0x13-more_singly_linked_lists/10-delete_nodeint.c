@@ -1,11 +1,19 @@
 #include "lists.h"
 
+/**
+ * delete_nodeint_at_index - deletes the node at index
+ * @head: double pointer
+ * @index: index of node
+ *
+ * Return: 1 (success) or -1 (failed)
+ */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *ptr1;
 	listint_t *ptr2;
 
-	if (!head || !(*head))
+	if (!head)
 		return (-1);
 	ptr1 = *head;
 	if (index == 0)

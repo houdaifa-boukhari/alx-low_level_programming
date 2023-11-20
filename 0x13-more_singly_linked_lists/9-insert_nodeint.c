@@ -46,7 +46,7 @@ listint_t *add_node_begenner(listint_t **head, const int n)
  * @idx: index of the node
  * @n: data to store in new node
  *
- * Return: return head
+ * Return: return pointer of the node
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)

@@ -69,7 +69,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		ptr1 = ptr1->next;
 		idx--;
 	}
-	if (!ptr1)
+	if (!ptr1 && !(ptr1->next))
 	{
 		free(new_node);
 		return (NULL);

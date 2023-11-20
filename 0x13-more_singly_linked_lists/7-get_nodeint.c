@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
- * add_nodeint - adds a new node at the beginning of a list
+ * add_node - adds a new node at the beginning of a list
  * @head: pointer of the header linked list
  * @n: integer to store in new node
  * Return: the new node
  */
 
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_node(listint_t **head, const int n)
 {
 	listint_t *new_node;
 
@@ -39,6 +39,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		ptr = ptr->next;
 	if (ptr == NULL)
 		return (NULL);
-	add_nodeint(&head, ptr->n);
+	add_node(&head, ptr->n);
 	return (head);
 }

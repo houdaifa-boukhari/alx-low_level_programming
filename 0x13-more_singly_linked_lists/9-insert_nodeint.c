@@ -46,13 +46,14 @@ listint_t *add_node_begenner(listint_t **head, const int n)
  * @idx: index of the node
  * @n: data to store in new node
  *
- * Return: return pointer of list
+ * Return: return head
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *ptr1;
 	listint_t *new_node;
+	listint_t *ptr2;
 
 	if (!head || list_len(*head) < idx)
 		return (NULL);
@@ -70,7 +71,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!new_node)
 		return (NULL);
 	new_node->n = n;
-	new_node->next = ptr1->next;
+	ptr2 = ptr1->next;
 	ptr1->next = new_node;
+	new_node->next = ptr2;
 	return (new_node);
 }

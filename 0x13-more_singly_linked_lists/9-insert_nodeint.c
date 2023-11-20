@@ -49,11 +49,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		ptr1 = ptr1->next;
 		idx--;
 	}
-	if (!ptr1)
-	{
-		free(new_node);
-		return (NULL);
-	}
 	ptr2 = ptr1->next;
 	ptr1->next = new_node;
 	new_node->next = ptr2;

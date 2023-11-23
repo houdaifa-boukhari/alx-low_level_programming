@@ -9,9 +9,7 @@
 int get_endianness(void)
 {
 	size_t i;
-	char *p;
 
 	i = 1;
-	p = (char *)i;
-	return ((int)*p);
+	return ((char *)&i);
 }

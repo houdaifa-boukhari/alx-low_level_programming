@@ -9,16 +9,24 @@
 
 void print_binary(unsigned long int n)
 {
-	char digite;
+	unsigned long int nb;
+	int reps;
 
-	if (n >= 2)
+	nb = n;
+	reps = 0;
+	if (n == 0)
 	{
-		print_binary(n / 2);
-		print_binary(n % 2);
+		write(1, "0", 1);
+		return;
 	}
-	else
+	while ((nb >>= 1) > 0)
+		reps++;
+	while (reps >= 0)
 	{
-		digite = n + 48;
-		_putchar(digite);
+		if ((n >> reps) & 1)
+			write(1, "1", 1);
+		else
+			write(1, "0", 1);
+		reps--;
 	}
 }

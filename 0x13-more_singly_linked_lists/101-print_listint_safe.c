@@ -1,6 +1,30 @@
 #include "lists.h"
 
 /**
+ * check_loop - it cheacks if loop is there or not
+ * @head: pointer of linked list
+ * @ptr1: pointer that pointes at the element to print
+ * @nb: nuber the element
+ *
+ * Return: 1 is true or 1 is fals
+ */
+
+int	check_loop(const listint_t *head, const listint_t *ptr1, size_t nb)
+{
+	const listint_t *ptr;
+
+	ptr = head;
+	while (ptr && nb > 0)
+	{
+		if (ptr == ptr1)
+			return (1);
+		ptr = ptr->next;
+		nb--;
+	}
+	return (0);
+}
+
+/**
  * print_listint_safe - print all the element os linkd list
  * @head: pointer of linked list
  *
@@ -10,24 +34,21 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t count;
-	const listint_t *slow;
-	const listint_t *fast;
+	const listint_t *ptr;
 
-	slow = head;
-	fast = head;
+	ptr = head;
 	count = 0;
-	/*Use Floyd’s Cycle Detection Algorithm*/
-	while (slow && fast && fast->next)
+	while (ptr)
 	{
-		printf("[%p] %d\n", (void *)(slow), slow->n);
-		count++;
-		slow = slow->next;
-		fast = fast->next->next;
-		if (slow == fast)
+		if (!check_loop(head, ptr, count))
+			printf("[%p] %d\n", (void *)(ptr), ptr->n);
+		else
 		{
-			printf("-> [%p] %d\n", (void *)(slow), slow->n);
+			printf("-> [%p] %d\n", (void *)(ptr), ptr->n);
 			exit(98);
 		}
+		count++;
+		ptr = ptr->next;
 	}
 	return (count);
 }

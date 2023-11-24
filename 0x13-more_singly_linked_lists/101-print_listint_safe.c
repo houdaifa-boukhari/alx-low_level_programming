@@ -38,8 +38,6 @@ size_t print_listint_safe(const listint_t *head)
 
 	ptr = head;
 	count = 0;
-	if (!head)
-		exit(98);
 	while (ptr)
 	{
 		if (!check_loop(head, ptr, count))

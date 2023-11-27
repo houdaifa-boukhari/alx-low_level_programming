@@ -22,7 +22,7 @@ void	*creat_buffer(char *filename)
 
 /**
 * close_file - close file.
- * @fd: The file descriptor to be close 
+ * @fd: The file descriptor to be close
  *
  * Return: void
  */

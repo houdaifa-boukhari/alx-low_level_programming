@@ -17,7 +17,7 @@ void	*creat_buffer(char *filename)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
-	return ((void *)buffer);
+	return (buffer);
 }
 
 /**
@@ -29,10 +29,7 @@ void	*creat_buffer(char *filename)
 
 void close_file(int fd)
 {
-	int nb;
-
-	nb = close(fd);
-	if (nb == -1)
+	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -52,7 +49,7 @@ int main(int argc, char **argv)
 	int fd2;
 	int bytes_read;
 	int bytes_write;
-	char *buffer;
+	void *buffer;
 
 	if (argc != 3)
 	{

@@ -7,7 +7,7 @@
  * Return: void
  */
 
-void	creat_buffer(char *filename)
+void	*creat_buffer(char *filename)
 {
 	char *buffer;
 
@@ -17,20 +17,21 @@ void	creat_buffer(char *filename)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", filename);
 		exit(99);
 	}
+	return ((void *)buffer);
 }
 
 /**
 * close_file - close file.
- * @filename: name the file
+ * @fd: The file descriptor to be close 
  *
  * Return: void
  */
 
-void close_file(char *filename)
+void close_file(int fd)
 {
 	int nb;
 
-	nb = close(filename);
+	nb = close(fd);
 	if (nb == -1)
 	{
 		dprintf(2, "Error: Can't close fd FD_VALUE");

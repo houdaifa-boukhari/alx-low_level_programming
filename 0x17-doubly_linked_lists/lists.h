@@ -1,5 +1,7 @@
 #ifndef LISTS_H
 # define LISTS_H
+# include <stdlib.h>
+# include <stdio.h>
 
 typedef struct dlistint_s
 {
@@ -7,9 +9,6 @@ typedef struct dlistint_s
 	struct dlistint_s *prev;
 	struct dlistint_s *next;
 } dlistint_t;
-
-# include <stdlib.h>
-# include <stdio.h>
 
 size_t		print_dlistint(const dlistint_t *h);
 size_t		dlistint_len(const dlistint_t *h);

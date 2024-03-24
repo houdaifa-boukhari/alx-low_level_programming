@@ -23,7 +23,7 @@ dlistint_t *get_index(dlistint_t *head, unsigned int index)
 }
 
 /**
- * dlistint_size - returns the number of elements in a doubly linked list
+ * lst_size - returns the number of elements in a doubly linked list
  * @h: pointer to the head of the list
  *
  * Return: number of elements in the list

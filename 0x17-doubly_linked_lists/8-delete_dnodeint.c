@@ -69,7 +69,8 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		/*printf("end : %d--->(%p)\n", position->n, &(position->n));*/
 		free(position);
 		position = NULL;
-		*head = NULL;
+		if (!((*head)->next))
+			*head = NULL;
 		return (1);
 	}
 	else if (index == 0)
@@ -94,3 +95,4 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	position = NULL;
 	return (1);
 }
+

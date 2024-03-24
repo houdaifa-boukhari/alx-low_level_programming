@@ -44,7 +44,7 @@ static unsigned int lst_size(dlistint_t *h)
 }
 
 /**
- * delete_dnodeint_at_index - deletes the node at index of a dlistint_t linked list
+ * delete_dnodeint_at_index - deletes the node at index of a linked list
  * @head: double pointer to the head of the list
  * @index: index of the node to delete
  *
@@ -55,8 +55,8 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *position = *head;
 	dlistint_t *prev = NULL;
-
 	unsigned int size = lst_size(*head);
+
 	if (index > size - 1 || !head || (index == 0 && size == 0))
 		return (-1);
 	if (index == (size - 1) && size != 0)

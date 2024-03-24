@@ -66,7 +66,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	else if (idx == size)
 	{
 		new_node = add_dnodeint_end(h, n);
-		while (new_node)
+		while (new_node->next)
 			new_node = new_node->next;
 		return (new_node);
 	}

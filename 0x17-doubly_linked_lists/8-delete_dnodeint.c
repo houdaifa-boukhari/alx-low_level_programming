@@ -55,7 +55,7 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *position = NULL;
 	dlistint_t *prev = NULL;
-	unsigned int size = lst_size(*head);;
+	unsigned int size = lst_size(*head);
 
 	position = *head;
 	if (!head || !*head || size < index + 1 || (int)index < 0)

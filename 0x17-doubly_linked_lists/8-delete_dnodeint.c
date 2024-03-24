@@ -1,0 +1,92 @@
+#include "lists.h"
+
+/**
+ * get_index - returns the nth node of a dlistint_t linked list
+ * @head: pointer to the head of the list
+ * @index: index of the node to return
+ *
+ * Return: the nth node of a dlistint_t linked list, or NULL if the node does
+ * not exist
+ */
+
+static dlistint_t *get_index(dlistint_t *head, unsigned int index)
+{
+	unsigned int i = 0;
+
+	while (i < index && head)
+	{
+		head = head->next;
+		i++;
+	}
+	return (head);
+}
+
+/**
+ * lst_size - returns the number of elements in a doubly linked list
+ * @h: pointer to the head of the list
+ *
+ * Return: number of elements in the list
+ */
+
+static unsigned int lst_size(dlistint_t *h)
+{
+	unsigned int count;
+
+	count = 0;
+	if (!h)
+		return (0);
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
+}
+
+/**
+ * delete_dnodeint_at_index - deletes the node at index of a dlistint_t linked list
+ * @head: double pointer to the head of the list
+ * @index: index of the node to delete
+ *
+ * Return: 1 if it succeeded, -1 if it failed
+ */
+
+int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+{
+	dlistint_t *position = *head;
+	dlistint_t *prev = NULL;
+
+	unsigned int size = lst_size(*head);
+	if (index > size - 1 || !head || (index == 0 && size == 0))
+		return (-1);
+	if (index == (size - 1) && size != 0)
+	{
+		position = get_index(*head, index);
+		prev = position->prev;
+		if (prev != NULL)
+			prev->next = NULL;
+		free(position);
+		position = NULL;
+		*head = NULL;
+		return (1);
+	}
+	else if (index == 0)
+	{
+		if ((*head)->next)
+		{
+			*head = (*head)->next;
+			(*head)->prev = NULL;
+		}
+		free(position);
+		position = NULL;
+		(*head)->prev = NULL;
+		return (1);
+	}
+	position = get_index(*head, index);
+	prev = position->prev;
+	position->next->prev = prev;
+	prev->next = position->next;
+	free(position);
+	position = NULL;
+	return (1);
+}

@@ -54,12 +54,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node = NULL;
 	dlistint_t *position = NULL;
+	size_t size = dlistint_size(*h);
 
-	if (!h)
+	if (!h || idx > size || idx < 0)
 		return (NULL);
 	else if (idx == 0)
 		return (add_dnodeint(h, n));
-	else if (idx == dlistint_size(*h))
+	else if (idx == size)
 		return (add_dnodeint_end(h, n));
 	new_node = add_dnodeint_end(&new_node, n);
 	position = get_index(*h, idx - 1);

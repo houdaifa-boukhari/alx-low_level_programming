@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_dnodeint_at_index - returns the nth node of a dlistint_t linked list
+ * get_index - returns the nth node of a dlistint_t linked list
  * @head: pointer to the head of the list
  * @index: index of the node to return
  *
@@ -22,7 +22,7 @@ dlistint_t *get_index(dlistint_t *head, unsigned int index)
 }
 
 /**
- * dlistint_len - returns the number of elements in a doubly linked list
+ * dlistint_size - returns the number of elements in a doubly linked list
  * @h: pointer to the head of the list
  *
  * Return: number of elements in the list

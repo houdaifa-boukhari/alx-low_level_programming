@@ -9,13 +9,13 @@
 
 size_t dlistint_len(const dlistint_t *h)
 {
-    size_t count;
+	size_t count;
 
-    count = 0;
-    while (h)
-    {
-        h = h->next;
-        count++;
-    }
-    return (count);
+	count = 0;
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
 }

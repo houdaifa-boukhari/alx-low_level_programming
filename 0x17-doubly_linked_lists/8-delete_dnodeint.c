@@ -137,6 +137,7 @@ int main(void)
     printf("Deleting with an out-of-bounds index:\n");
     res = delete_dnodeint_at_index(&head, lst_size(head));
     printf("return %d\n", res);
+	system("leaks a.out");
 
     return (0);
 }

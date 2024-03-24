@@ -9,9 +9,9 @@
  * not exist
  */
 
-dlistint_t *get_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_index(dlistint_t *head, int index)
 {
-	unsigned int i = 0;
+	int i = 0;
 
 	while (i < index && head)
 	{

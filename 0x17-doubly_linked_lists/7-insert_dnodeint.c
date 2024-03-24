@@ -23,6 +23,28 @@ dlistint_t *get_index(dlistint_t *head, unsigned int index)
 }
 
 /**
+ * dlistint_size - returns the number of elements in a doubly linked list
+ * @h: pointer to the head of the list
+ *
+ * Return: number of elements in the list
+ */
+
+unsigned int lst_size(dlistint_t *h)
+{
+	unsigned int count;
+
+	count = 0;
+	if (!h)
+		return (0);
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
+}
+
+/**
  * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: pointer to the head of the list
  * @idx: index of the list where the new node should be added
@@ -35,7 +57,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node = NULL;
 	dlistint_t *position = NULL;
+    unsigned int size = lst_size(*h);
 
+    if (idx == 0)
+		return (add_dnodeint(h, n));
+	else if (idx == size)
+		return (add_dnodeint_end(h, n));
 	new_node = add_dnodeint_end(&new_node, n);
 	position = get_index(*h, idx -1);
 	new_node->next = position->next;

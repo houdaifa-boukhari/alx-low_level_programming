@@ -28,9 +28,9 @@ dlistint_t *get_index(dlistint_t *head, unsigned int index)
  * Return: number of elements in the list
  */
 
-size_t dlistint_size(const dlistint_t *h)
+unsigned int dlistint_size(const dlistint_t *h)
 {
-	size_t count;
+	unsigned int count;
 
 	count = 0;
 	if (!h)
@@ -56,7 +56,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node = NULL;
 	dlistint_t *position = NULL;
-	unsigned int size = (unsigned int)dlistint_size(*h);
+	unsigned int size = unsignedlistint_size(*h);
 
 	if (!h || idx > size || idx < 0)
 		return (NULL);

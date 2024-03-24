@@ -57,14 +57,12 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *prev = NULL;
 	unsigned int size = lst_size(*head);
 
-	if (!head || !*head)
+	if (!head || !*head || size < index + 1 || (int)index < 0)
 		return (-1);
 	if (index == (size - 1))
 	{
 		position = get_index(*head, index);
 		prev = position->prev;
-		if (prev != NULL)
-			prev->next = NULL;
 		free(position);
 		position = NULL;
 		*head = NULL;
@@ -83,8 +81,6 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 	position = get_index(*head, index);
-	if (position == NULL)
-		return (-1);
 	prev = position->prev;
 	position->next->prev = prev;
 	prev->next = position->next;
@@ -101,7 +97,7 @@ int main(void)
     add_dnodeint_end(&head, 0);
 	print_dlistint(head);
 	printf("----------------\n");
-    int res = delete_dnodeint_at_index(&head, 0);
-	printf("%d-----\n", res);
+    int res = delete_dnodeint_at_index(&head, -1);
+	printf("return %d\n", res);
     return (0);
 }

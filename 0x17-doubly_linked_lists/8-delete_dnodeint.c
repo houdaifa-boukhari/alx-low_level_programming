@@ -89,15 +89,3 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	return (1);
 }
 
-int main(void)
-{
-    dlistint_t *head;
-
-    head = NULL;
-    add_dnodeint_end(&head, 0);
-	print_dlistint(head);
-	printf("----------------\n");
-    int res = delete_dnodeint_at_index(&head, -1);
-	printf("return %d\n", res);
-    return (0);
-}

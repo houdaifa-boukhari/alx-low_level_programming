@@ -98,10 +98,10 @@ int	delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 int main(void)
 {
     dlistint_t *head = NULL;
-
+	int res ;
     // Test deleting from an empty list
     printf("Deleting from an empty list:\n");
-    int res = delete_dnodeint_at_index(&head, 0);
+    res = delete_dnodeint_at_index(&head, 0);
     printf("return %d\n", res);
 
     // Add a single node to the list

@@ -9,17 +9,17 @@
  * not exist
  */
 
-dlistint_t *get_index(dlistint_t *head, int index)
-{
-	int i = 0;
+// dlistint_t *get_index(dlistint_t *head, int index)
+// {
+// 	int i = 0;
 
-	while (i < index && head)
-	{
-		head = head->next;
-		i++;
-	}
-	return (head);
-}
+// 	while (i < index && head)
+// 	{
+// 		head = head->next;
+// 		i++;
+// 	}
+// 	return (head);
+// }
 
 /**
  * dlistint_size - returns the number of elements in a doubly linked list
@@ -28,20 +28,20 @@ dlistint_t *get_index(dlistint_t *head, int index)
  * Return: number of elements in the list
  */
 
-unsigned int dlistint_size(dlistint_t *h)
-{
-	unsigned int count;
+// unsigned int dlistint_size(dlistint_t *h)
+// {
+// 	unsigned int count;
 
-	count = 0;
-	if (!h)
-		return (0);
-	while (h)
-	{
-		h = h->next;
-		count++;
-	}
-	return (count);
-}
+// 	count = 0;
+// 	if (!h)
+// 		return (0);
+// 	while (h)
+// 	{
+// 		h = h->next;
+// 		count++;
+// 	}
+// 	return (count);
+// }
 
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position

@@ -12,10 +12,10 @@ void free_list(hash_node_t *head)
 	while (head)
 	{
 		next = head->next;
-		if (head->key)
+		if (head->key != NULL)
 			free(head->key);
-		if (head->value)
-			free(head->value);
+		// if (head->value)
+		// 	free(head->value);
 		free(head);
 		head = NULL;
 		head = next;

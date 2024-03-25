@@ -14,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (!ht || !ht->array || ht->size == 0)
 	{
 		printf("{}\n");
-		return ;
+		return;
 	}
 	printf("{");
 	check = false;

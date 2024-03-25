@@ -33,6 +33,7 @@ typedef struct hash_table_s
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <stdbool.h>
 
 hash_table_t    *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);

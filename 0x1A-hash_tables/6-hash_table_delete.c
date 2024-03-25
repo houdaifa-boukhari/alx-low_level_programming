@@ -52,8 +52,8 @@ void hash_table_delete(hash_table_t *ht)
 int main(void)
 {
     hash_table_t *ht;
-    char *key;
-    char *value;
+    // char *key;
+    // char *value;
 
     ht = hash_table_create(1024);
     hash_table_set(ht, "c", "fun");

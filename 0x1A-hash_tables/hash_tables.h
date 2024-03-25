@@ -31,5 +31,6 @@ typedef struct hash_table_s
 } hash_table_t;
 
 # include <stdlib.h>
+# include <stdio.h>
 
 #endif

@@ -12,10 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 	bool check;
 
 	if (!ht || !ht->array || ht->size == 0)
-	{
-		printf("{}\n");
 		return;
-	}
 	printf("{");
 	check = false;
 	while (i < ht->size)

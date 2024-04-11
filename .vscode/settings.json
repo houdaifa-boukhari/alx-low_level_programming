@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "__node_handle": "c",
-        "hash_tables.h": "c",
-        "lists.h": "c"
-    }
-}

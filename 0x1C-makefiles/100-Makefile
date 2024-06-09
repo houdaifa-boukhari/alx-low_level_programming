@@ -3,7 +3,6 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 HEADER = m.h
-RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(NAME)

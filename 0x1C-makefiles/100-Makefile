@@ -5,9 +5,9 @@ CC = gcc
 HEADER = m.h
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(NAME)
+all: $(NAME) $(HEADER)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
